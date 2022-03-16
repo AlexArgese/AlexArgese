@@ -1,0 +1,224 @@
+#importo
+from tkinter import *
+from tkinter import ttk
+#
+# #creo la finestra
+# root = Tk()
+# root.title("Calcolatrice") #nome finestra
+#
+# valore=StringVar()
+# schermo=ttk.Label(root, textvariable=valore, background="green") #crea widget
+# schermo['background']="yellow" #fa cambiare background, da utilizzare come dizionario
+# l=ttk.Label(root, text="Calcolatrice", background="red").pack()
+# valore.set(0)
+# schermo.pack() #pack fa visualizzare
+#
+# #funzione tasto 1
+# def tasto1():
+#     dato=valore.get()
+#     if dato=="0":
+#         valore.set("1")
+#     else:
+#         valore.set(dato+"1")
+#
+# #funzione somma
+# def tastoSomma():
+#     valore.set(valore.get()+"+")
+#
+# #funzione sottrazione
+# def tastoSottrazione():
+#     valore.set(valore.get()+"-")
+#
+# #funzione esegui
+# def tastoEsegui():
+#     if "+" in valore.get():
+#         dati=valore.get().split("+")
+#         a=int(dati[0])
+#         b=int(dati[1])
+#         ris=a+b
+#         valore.set(str(ris))
+#     if "-" in valore.get():
+#         dati=valore.get().split("-")
+#         a=int(dati[0])
+#         b=int(dati[1])
+#         ris=a-b
+#         valore.set(str(ris))
+#
+# #funzione tasto 2
+# def tasto2():
+#     dato=valore.get()
+#     if dato=="0":
+#         valore.set("2")
+#     else:
+#         valore.set(dato+"2")
+#
+# #funzione tasto 3
+# def tasto3():
+#     dato=valore.get()
+#     if dato=="0":
+#         valore.set("3")
+#     else:
+#         valore.set(dato+"3")
+#
+# #funzione cancella
+# def cancella():
+#     dato=valore.get()
+#     valore.set("0")
+#
+# #frame crea rettangoli
+# frame=ttk.Frame(root)
+# frame.pack()
+#
+# #bottone
+# b=ttk.Button(root, command=tasto1, text="1")
+# b.pack(side=LEFT)
+# ttk.Button(root, command=tasto2, text="2").pack(side=LEFT)
+# ttk.Button(root, command=tasto3, text="3").pack(side=LEFT)
+# ttk.Button(root, command=tastoSomma, text="+").pack()
+# ttk.Button(root, command=tastoSottrazione, text="-").pack()
+# ttk.Button(root, command=tastoEsegui, text="=").pack()
+# ttk.Button(root, command=cancella, text="CANC").pack()
+#
+# widget=ttk.Label(root, text="ciao", foreground="white", background="black", wraplength=5)
+# widget.pack()
+#
+# # immagine=PhotoImage(file="Copertina 2.png")
+# # im=ttk.Label(root, textvariable=immagine).pack()
+#
+# S=ttk.Style()
+# S.configure("Danger.TFrame", background="yellow", borderwidth=5, relief="raised")
+# ttk.Frame(root, width=25, height=25, style="Danger.TFrame").pack(side=BOTTOM)
+#
+# #checkbuttons
+# def agisci():
+#  check["text"]=check["text"]+"."
+# variabile = StringVar()
+# check = ttk.Checkbutton(root, text='Selezionami!',
+#  command=agisci, variable=variabile,
+#  onvalue='!', offvalue='?')
+# check.pack()
+# def premiBottone():
+#  b["text"]=b["text"]+variabile.get()
+# b = ttk.Button(root, text='Ciao', command=premiBottone)
+# b.pack()
+#
+# #radiobuttons
+# phone = StringVar()
+# p = ttk.Radiobutton(root, text='Prima opzione', variable=phone, value='prima')
+# s = ttk.Radiobutton(root, text='Seconda opzione',variable=phone,value='seconda')
+# t = ttk.Radiobutton(root, text='Terza opzione', variable=phone, value='terza')
+# p.pack()
+# s.pack()
+# t.pack()
+#
+# #entry
+# username = StringVar()
+# name = ttk.Entry(root, textvariable=username).pack()
+# #es. password
+# name= ttk.Entry(root, textvariable=username, show="*").pack()
+#
+# def invio():
+#     testo = ttk.Label(root, textvariable=name)
+#     testo.pack()
+#
+# inv=ttk.Button(root, text="INVIO", command=invio).pack()
+#
+#
+# #combobox
+# countryvar = StringVar()
+# country = ttk.Combobox(root, textvariable=countryvar, font=("Times New Roman",15))
+# country['values'] = ('USA', 'Canada', 'Australia')
+# country.state(["readonly"]) #posso solo leggere, se lo tolgo, posso anche scrivere
+# country.pack()
+
+# #grid
+# def esegui():
+#  try:
+#      if float(latoE.get())>=0:
+#         volume.set(float(latoE.get())**3)
+#      else:
+#         volume.set("Err")
+#  except:
+#     volume.set("Err")
+# root = Tk()
+# root.title("Calcola Volume Cubo")
+# content = ttk.Frame(root)
+# content.grid(column=0,row=0)
+# content.grid(column=0,row=0,sticky="nsew")
+# root.columnconfigure(0, weight=1)
+# root.rowconfigure(0, weight=1)
+# content.columnconfigure(0, weight=1)
+# content.rowconfigure(0, weight=1)
+# latoL = ttk.Label(content, text="Lato")
+# latoL.grid(column=0,row=0, sticky="nsew")
+# latoE = ttk.Entry(content)
+# latoE.grid(column=0,row=1, sticky="nsew")
+# calcolaB=ttk.Button(content, text="Calcola\nvolume", command=esegui)
+# calcolaB.grid(column=1,row=0,rowspan=2, sticky="nsew")
+# volume=StringVar()
+# latoL = ttk.Label(content, textvariable=volume)
+# volume.set("Volume")
+# latoL.grid(column=2,row=0,rowspan=2, sticky="nsew")
+# root.bind("<Return>",lambda e:calcolaB.invoke()) #spiegato più avanti
+#
+# #sticky attacca ad un lato o angolo
+# #es. content.grid(column=0,row=0,sticky="nsew")
+# #nsew è nord sud est ovest
+#
+# #listbox e scrollbar
+# root = Tk()
+# root.title("Frutta")
+# parent = ttk.Frame(root)
+# parent.grid(column=0,row=0,sticky="nsew")
+# frutta = ["mela", "lime", "banana", "kiwi", "pera", "limone", "mango", "caco", "luca"]
+# fruttaVar = StringVar(value=frutta)
+# l = Listbox(parent, listvariable=fruttaVar, height=3, font=("",30))
+# l.grid(column=0,row=0,sticky="nsew")
+# s = ttk.Scrollbar(parent, orient=VERTICAL, command=l.yview)
+# s.grid(column=1,row=0,sticky="nsew")
+# l['yscrollcommand'] = s.set
+# parent.grid_columnconfigure(0, weight=1)
+# parent.grid_rowconfigure(0, weight=1)
+# root.grid_columnconfigure(0, weight=1)
+# root.grid_rowconfigure(0, weight=1)
+#
+# #text
+# t = Text(root, width=40, height=10)
+# t.grid(column=2,row=0,sticky="nsew")
+#
+# #scale
+# scala = ttk.Scale(root, orient=HORIZONTAL, length=200, from_=1.0, to=100.0)
+# scala.grid(column=3,row=0)
+#
+# #spinbox
+# spinval = StringVar()
+# spinbox = ttk.Spinbox(root, from_=-10.0, to=10.0, textvariable=spinval)
+# spinbox.grid(column=4,row=0)
+#
+# #progressbar
+# prog=ttk.Progressbar(root, orient=HORIZONTAL, length=200, mode='determinate', value=30)
+# prog.grid(column=4,row=1)
+
+# #menu
+# root = Tk()
+# root.title("Menu")
+# 
+# root.option_add('*tearOff', FALSE)
+# 
+# menubar = Menu(root)
+# root['menu'] = menubar
+# 
+# menu_file = Menu(menubar)
+# menubar.add_cascade(menu=menu_file, label='File')
+# 
+# menu_file.add_command(label='New') #command=newFile
+# menu_file.add_command(label='Open...') #,command=openF
+# 
+# menu_file.add_separator() #aggiunge solo una riga
+# 
+# menu_sub = Menu(menu_file)
+# menu_file.add_cascade(menu=menu_sub, label='Sub menu')
+# menu_sub.add_command(label='Sub') #,command=subFile
+
+root.mainloop()
+
